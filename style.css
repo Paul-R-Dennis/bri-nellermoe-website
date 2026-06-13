@@ -214,6 +214,7 @@ a:hover { color: var(--gold-light); }
   min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
   background-color: var(--navy);
   background-image: url('images/hero-bg.avif');
@@ -387,10 +388,12 @@ a:hover { color: var(--gold-light); }
     padding: 5rem 2rem 4rem;
   }
   .hero-text { align-items: center; }
+  .hero-title { font-size: clamp(2.2rem, 10vw, 3.5rem); }
   .hero-actions { justify-content: center; }
   .hero-email-form { max-width: 100%; }
-  .hero-cover { order: -1; }
-  .hero-cover-img { max-width: 200px; }
+  .hero-cover { order: -1; width: 100%; text-align: center; }
+  .hero-cover-glow { display: none; }
+  .hero-cover-img { max-width: 200px; display: inline-block; }
 }
 
 /* ============================================================
@@ -1047,6 +1050,21 @@ section { padding: 6rem 2rem; }
 .fade-in-delay-1  { animation-delay: 0.15s; }
 .fade-in-delay-2  { animation-delay: 0.3s; }
 .fade-in-delay-3  { animation-delay: 0.45s; }
+
+/* ============================================================
+   WIP BANNER
+   ============================================================ */
+.wip-banner {
+  background: var(--burgundy-deep);
+  color: var(--gold-light);
+  text-align: center;
+  padding: 0.6rem 1rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(201,168,76,0.2);
+}
 
 /* ============================================================
    KIT FORM OVERRIDES
