@@ -1118,3 +1118,68 @@ section { padding: 6rem 2rem; }
   justify-content: center;
   opacity: 0.4;
 }
+
+/* ============================================================
+   CONTACT FORM
+   ============================================================ */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.form-field label {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+}
+
+.form-field input,
+.form-field textarea {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(212,175,55,0.3);
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  transition: border-color 0.2s;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: rgba(245,240,230,0.35);
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.form-submit {
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  padding: 0.85rem 2rem;
+  text-transform: uppercase;
+  transition: background 0.2s, color 0.2s;
+  width: 100%;
+}
+
+.form-submit:hover {
+  background: var(--gold);
+  color: var(--navy);
+}
+
