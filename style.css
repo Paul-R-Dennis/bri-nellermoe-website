@@ -21,6 +21,12 @@
   --text:          #E8DFD0;
   --text-muted:    #9E9282;
 
+  /* RGB components for opacity variants */
+  --navy-rgb:      13, 27, 42;
+  --gold-rgb:      201, 168, 76;
+  --burgundy-rgb:  107, 30, 42;
+  --cream-rgb:     240, 232, 216;
+
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body:    'Raleway', system-ui, sans-serif;
 
@@ -82,7 +88,7 @@ a:hover { color: var(--gold-light); }
   gap: 1rem;
   margin-left: 1.5rem;
   padding-left: 1.5rem;
-  border-left: 1px solid rgba(201,168,76,0.18);
+  border-left: 1px solid rgba(var(--gold-rgb), 0.18);
 }
 .nav-social a {
   color: var(--cream-dim);
@@ -109,8 +115,8 @@ a:hover { color: var(--gold-light); }
   display: flex;
   align-items: center;
   padding: 0 2rem;
-  background: linear-gradient(to bottom, rgba(13,27,42,0.97), rgba(13,27,42,0.88));
-  border-bottom: 1px solid rgba(201,168,76,0.18);
+  background: linear-gradient(to bottom, rgba(var(--navy-rgb), 0.97), rgba(var(--navy-rgb), 0.88));
+  border-bottom: 1px solid rgba(var(--gold-rgb), 0.18);
   backdrop-filter: blur(8px);
 }
 
@@ -181,7 +187,7 @@ a:hover { color: var(--gold-light); }
     top: var(--nav-height);
     left: 0; right: 0;
     background: var(--navy);
-    border-bottom: 1px solid rgba(201,168,76,0.18);
+    border-bottom: 1px solid rgba(var(--gold-rgb), 0.18);
     flex-direction: column;
     gap: 0;
     padding: 1rem 0 1.5rem;
@@ -227,9 +233,9 @@ a:hover { color: var(--gold-light); }
   inset: 0;
   background: linear-gradient(
     to right,
-    rgba(13,27,42,0.92) 0%,
-    rgba(13,27,42,0.75) 55%,
-    rgba(13,27,42,0.35) 100%
+    rgba(var(--navy-rgb), 0.92) 0%,
+    rgba(var(--navy-rgb), 0.75) 55%,
+    rgba(var(--navy-rgb), 0.35) 100%
   );
 }
 
@@ -292,8 +298,8 @@ a:hover { color: var(--gold-light); }
 .hero-email-form input[type="email"] {
   flex: 1;
   padding: 0.7rem 1rem;
-  background: rgba(13, 27, 42, 0.7);
-  border: 1px solid rgba(201, 168, 76, 0.4);
+  background: rgba(var(--navy-rgb), 0.7);
+  border: 1px solid rgba(var(--gold-rgb), 0.4);
   border-right: none;
   color: var(--cream);
   font-family: var(--font-body);
@@ -301,7 +307,7 @@ a:hover { color: var(--gold-light); }
   outline: none;
 }
 .hero-email-form input[type="email"]::placeholder {
-  color: rgba(240, 232, 216, 0.45);
+  color: rgba(var(--cream-rgb), 0.45);
 }
 .hero-email-form input[type="email"]:focus {
   border-color: var(--gold);
@@ -340,7 +346,7 @@ a:hover { color: var(--gold-light); }
 .hero-cover-glow {
   position: absolute;
   inset: -40px;
-  background: radial-gradient(ellipse at center, rgba(107,30,42,0.45), transparent 65%);
+  background: radial-gradient(ellipse at center, rgba(var(--burgundy-rgb), 0.45), transparent 65%);
   pointer-events: none;
 }
 
@@ -350,7 +356,7 @@ a:hover { color: var(--gold-light); }
   max-width: 320px;
   aspect-ratio: 2/3;
   object-fit: cover;
-  box-shadow: 12px 20px 60px rgba(0,0,0,0.7), 0 0 0 1px rgba(201,168,76,0.15);
+  box-shadow: 12px 20px 60px rgba(0,0,0,0.7), 0 0 0 1px rgba(var(--gold-rgb), 0.15);
 }
 
 .hero-scroll {
@@ -496,7 +502,7 @@ section { padding: 6rem 2rem; }
   max-width: 320px;
   aspect-ratio: 2/3;
   object-fit: cover;
-  box-shadow: 8px 12px 48px rgba(0,0,0,0.6), 0 0 0 1px rgba(201,168,76,0.12);
+  box-shadow: 8px 12px 48px rgba(0,0,0,0.6), 0 0 0 1px rgba(var(--gold-rgb), 0.12);
   display: block;
 }
 
@@ -522,7 +528,7 @@ section { padding: 6rem 2rem; }
 .book-glow {
   position: absolute;
   inset: -20px;
-  background: radial-gradient(ellipse at center, rgba(107,30,42,0.3), transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(var(--burgundy-rgb), 0.3), transparent 70%);
   pointer-events: none;
 }
 
@@ -668,7 +674,7 @@ section { padding: 6rem 2rem; }
   aspect-ratio: 1/1;
   object-fit: cover;
   object-position: top;
-  box-shadow: 6px 10px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,168,76,0.1);
+  box-shadow: 6px 10px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(var(--gold-rgb), 0.1);
 }
 
 .author-photo-placeholder {
@@ -752,7 +758,7 @@ section { padding: 6rem 2rem; }
   width: 100%;
   aspect-ratio: 2/3;
   object-fit: cover;
-  box-shadow: 10px 16px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(201,168,76,0.15);
+  box-shadow: 10px 16px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(var(--gold-rgb), 0.15);
 }
 .book-cover-lg-placeholder {
   width: 100%;
@@ -813,11 +819,11 @@ section { padding: 6rem 2rem; }
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--cream-dim);
-  border: 1px solid rgba(201,168,76,0.2);
+  border: 1px solid rgba(var(--gold-rgb), 0.2);
   padding: 0.7rem 1.25rem;
   transition: border-color var(--transition), color var(--transition), background var(--transition);
 }
-.buy-link:hover { border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.04); }
+.buy-link:hover { border-color: var(--gold); color: var(--gold); background: rgba(var(--gold-rgb), 0.04); }
 
 .coming-soon-card {
   position: relative;
@@ -825,8 +831,8 @@ section { padding: 6rem 2rem; }
   margin: 0 auto;
   text-align: center;
   padding: 3.5rem;
-  border: 1px solid rgba(201,168,76,0.15);
-  background: rgba(13,27,42,0.6);
+  border: 1px solid rgba(var(--gold-rgb), 0.15);
+  background: rgba(var(--navy-rgb), 0.6);
 }
 .coming-soon-card .corner {
   position: absolute;
@@ -899,8 +905,8 @@ section { padding: 6rem 2rem; }
 
 /* Kit embed placeholder */
 .kit-embed-placeholder {
-  border: 1px dashed rgba(201,168,76,0.35);
-  background: rgba(201,168,76,0.03);
+  border: 1px dashed rgba(var(--gold-rgb), 0.35);
+  background: rgba(var(--gold-rgb), 0.03);
   padding: 3rem 2rem;
   text-align: center;
   min-height: 280px;
@@ -941,13 +947,13 @@ section { padding: 6rem 2rem; }
   align-items: center;
   gap: 1.25rem;
   padding: 1.1rem 1.5rem;
-  border: 1px solid rgba(201,168,76,0.15);
+  border: 1px solid rgba(var(--gold-rgb), 0.15);
   color: var(--cream-dim);
   transition: border-color var(--transition), color var(--transition), background var(--transition);
 }
 .social-link:hover {
   border-color: var(--gold-dim);
-  background: rgba(201,168,76,0.05);
+  background: rgba(var(--gold-rgb), 0.05);
   color: var(--cream);
 }
 .social-link svg {
@@ -991,7 +997,7 @@ section { padding: 6rem 2rem; }
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--gold-dim);
-  border: 1px solid rgba(201,168,76,0.25);
+  border: 1px solid rgba(var(--gold-rgb), 0.25);
   padding: 0.3rem 0.8rem;
 }
 
@@ -1000,7 +1006,7 @@ section { padding: 6rem 2rem; }
    ============================================================ */
 .site-footer {
   background: var(--navy);
-  border-top: 1px solid rgba(201,168,76,0.1);
+  border-top: 1px solid rgba(var(--gold-rgb), 0.1);
   padding: 3rem 2rem;
   text-align: center;
 }
@@ -1092,11 +1098,11 @@ section { padding: 6rem 2rem; }
 .formkit-form[data-uid="30f0e69ab4"] .formkit-input {
   background: var(--navy) !important;
   color: var(--cream) !important;
-  border-color: rgba(201,168,76,0.3) !important;
+  border-color: rgba(var(--gold-rgb), 0.3) !important;
   font-family: var(--font-body) !important;
 }
 .formkit-form[data-uid="30f0e69ab4"] .formkit-input::placeholder {
-  color: rgba(240,232,216,0.45) !important;
+  color: rgba(var(--cream-rgb), 0.45) !important;
 }
 .formkit-form[data-uid="30f0e69ab4"] .formkit-input:focus {
   border-color: var(--gold) !important;
@@ -1120,6 +1126,254 @@ section { padding: 6rem 2rem; }
 }
 
 /* ============================================================
+   THEME SWITCHER UI
+   ============================================================ */
+.theme-switcher {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 9999;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  width: 168px;
+  background: var(--navy-light);
+  border: 1px solid rgba(var(--gold-rgb), 0.3);
+  backdrop-filter: blur(8px);
+  padding: 0.5rem 0.6rem;
+}
+
+.theme-switcher-label {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+  white-space: nowrap;
+}
+
+.theme-swatch {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: border-color 0.2s, transform 0.2s;
+  flex-shrink: 0;
+}
+.theme-swatch:hover  { transform: scale(1.15); }
+.theme-swatch.active { border-color: var(--gold); transform: scale(1.1); }
+
+/* ============================================================
+   THEME: EMBER & ASH
+   ============================================================ */
+[data-theme="ember"] {
+  --burgundy:      #A03010;
+  --burgundy-deep: #6B1A00;
+  --navy:          #160C08;
+  --navy-mid:      #241410;
+  --navy-light:    #341E14;
+  --forest:        #2E180A;
+  --gold:          #D4802A;
+  --gold-light:    #E8982A;
+  --gold-dim:      #9A5A18;
+  --cream:         #F5E4CC;
+  --cream-dim:     #D4AA78;
+  --text:          #EEDCC4;
+  --text-muted:    #B08060;
+  --navy-rgb:      22, 12, 8;
+  --gold-rgb:      212, 128, 42;
+  --burgundy-rgb:  160, 48, 16;
+  --cream-rgb:     245, 228, 204;
+}
+
+/* ============================================================
+   THEME: OBSIDIAN COURT
+   ============================================================ */
+[data-theme="obsidian"] {
+  --burgundy:      #5A1A7A;
+  --burgundy-deep: #380E52;
+  --navy:          #080810;
+  --navy-mid:      #100D1E;
+  --navy-light:    #181428;
+  --forest:        #1A1030;
+  --gold:          #B0A8D8;
+  --gold-light:    #D0C8F0;
+  --gold-dim:      #706890;
+  --cream:         #ECE8F8;
+  --cream-dim:     #B8B0D0;
+  --text:          #E0DCF0;
+  --text-muted:    #9090B8;
+  --navy-rgb:      8, 8, 16;
+  --gold-rgb:      176, 168, 216;
+  --burgundy-rgb:  90, 26, 122;
+  --cream-rgb:     236, 232, 248;
+}
+
+/* ============================================================
+   THEME: THE FOREST BETWEEN
+   ============================================================ */
+[data-theme="forest"] {
+  --burgundy:      #2A6030;
+  --burgundy-deep: #184020;
+  --navy:          #081408;
+  --navy-mid:      #0E2010;
+  --navy-light:    #162816;
+  --forest:        #1B3A2D;
+  --gold:          #C4A030;
+  --gold-light:    #E0BC45;
+  --gold-dim:      #807020;
+  --cream:         #F0ECCC;
+  --cream-dim:     #C8C490;
+  --text:          #E4E0BC;
+  --text-muted:    #96A068;
+  --navy-rgb:      8, 20, 8;
+  --gold-rgb:      196, 160, 48;
+  --burgundy-rgb:  42, 96, 48;
+  --cream-rgb:     240, 236, 204;
+}
+
+/* ============================================================
+   THEME: FADED PARCHMENT
+   ============================================================ */
+[data-theme="parchment"] {
+  --burgundy:      #7A1E2A;
+  --burgundy-deep: #521018;
+  --navy:          #F5EDD8;
+  --navy-mid:      #EDE0C4;
+  --navy-light:    #E5D4B0;
+  --forest:        #2A4A30;
+  --gold:          #7A5A18;
+  --gold-light:    #9A7020;
+  --gold-dim:      #5A4210;
+  --cream:         #1E1610;
+  --cream-dim:     #3A2E20;
+  --text:          #2A2018;
+  --text-muted:    #6A5840;
+  --navy-rgb:      245, 237, 216;
+  --gold-rgb:      122, 90, 24;
+  --burgundy-rgb:  122, 30, 42;
+  --cream-rgb:     30, 22, 16;
+}
+
+/* ============================================================
+   THEME: CELESTIAL INK
+   ============================================================ */
+[data-theme="celestial"] {
+  --burgundy:      #3A1860;
+  --burgundy-deep: #220E40;
+  --navy:          #0A0818;
+  --navy-mid:      #100E24;
+  --navy-light:    #181630;
+  --forest:        #1A1040;
+  --gold:          #C0B8E0;
+  --gold-light:    #E0D8F8;
+  --gold-dim:      #7870A0;
+  --cream:         #F0EEF8;
+  --cream-dim:     #C0B8D8;
+  --text:          #E8E4F4;
+  --text-muted:    #9890B8;
+  --navy-rgb:      10, 8, 24;
+  --gold-rgb:      192, 184, 224;
+  --burgundy-rgb:  58, 24, 96;
+  --cream-rgb:     240, 238, 248;
+}
+
+/* ============================================================
+   THEME: GILDED OPULENCE
+   ============================================================ */
+[data-theme="gilded"] {
+  --burgundy:      #3A2800;
+  --burgundy-deep: #280E00;
+  --navy:          #0A0800;
+  --navy-mid:      #140E00;
+  --navy-light:    #1E1800;
+  --forest:        #1A1400;
+  --gold:          #E8B830;
+  --gold-light:    #F8D040;
+  --gold-dim:      #A88020;
+  --cream:         #FFF8E8;
+  --cream-dim:     #E8D8A0;
+  --text:          #F8EED0;
+  --text-muted:    #C8A860;
+  --navy-rgb:      10, 8, 0;
+  --gold-rgb:      232, 184, 48;
+  --burgundy-rgb:  58, 40, 0;
+  --cream-rgb:     255, 248, 232;
+}
+
+/* ============================================================
+   THEME: CRIMSON COURT
+   ============================================================ */
+[data-theme="crimson"] {
+  --burgundy:      #8A0E1A;
+  --burgundy-deep: #5C0810;
+  --navy:          #1A0408;
+  --navy-mid:      #240810;
+  --navy-light:    #340A14;
+  --forest:        #2A0808;
+  --gold:          #D4AA40;
+  --gold-light:    #ECC840;
+  --gold-dim:      #8A6820;
+  --cream:         #F8E8E0;
+  --cream-dim:     #D8A898;
+  --text:          #F0E0D8;
+  --text-muted:    #B07868;
+  --navy-rgb:      26, 4, 8;
+  --gold-rgb:      212, 170, 64;
+  --burgundy-rgb:  138, 14, 26;
+  --cream-rgb:     248, 232, 224;
+}
+
+/* ============================================================
+   THEME: ROSE & THORN
+   ============================================================ */
+[data-theme="rose"] {
+  --burgundy:      #8A3050;
+  --burgundy-deep: #5A1A30;
+  --navy:          #100810;
+  --navy-mid:      #180E18;
+  --navy-light:    #241420;
+  --forest:        #2A1020;
+  --gold:          #D4A860;
+  --gold-light:    #E8C078;
+  --gold-dim:      #907040;
+  --cream:         #F8EEF0;
+  --cream-dim:     #D8B8C0;
+  --text:          #F0E4E8;
+  --text-muted:    #A88090;
+  --navy-rgb:      16, 8, 16;
+  --gold-rgb:      212, 168, 96;
+  --burgundy-rgb:  138, 48, 80;
+  --cream-rgb:     248, 238, 240;
+}
+
+/* ============================================================
+   THEME: SILVER SMOKE
+   ============================================================ */
+[data-theme="silver"] {
+  --burgundy:      #304050;
+  --burgundy-deep: #202838;
+  --navy:          #141820;
+  --navy-mid:      #1C2030;
+  --navy-light:    #282C3C;
+  --forest:        #283040;
+  --gold:          #A0B0C0;
+  --gold-light:    #C0D0E0;
+  --gold-dim:      #607080;
+  --cream:         #E8EEF4;
+  --cream-dim:     #A8B8C8;
+  --text:          #D8E4EE;
+  --text-muted:    #809098;
+  --navy-rgb:      20, 24, 32;
+  --gold-rgb:      160, 176, 192;
+  --burgundy-rgb:  48, 64, 80;
+  --cream-rgb:     232, 238, 244;
+}
+
+/* ============================================================
    CONTACT FORM
    ============================================================ */
 .form-field {
@@ -1139,8 +1393,8 @@ section { padding: 6rem 2rem; }
 
 .form-field input,
 .form-field textarea {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(212,175,55,0.3);
+  background: rgba(var(--navy-rgb), 0.25);
+  border: 1px solid rgba(var(--gold-rgb), 0.3);
   color: var(--cream);
   font-family: var(--font-body);
   font-size: 1rem;
@@ -1156,7 +1410,7 @@ section { padding: 6rem 2rem; }
 
 .form-field input::placeholder,
 .form-field textarea::placeholder {
-  color: rgba(245,240,230,0.35);
+  color: rgba(var(--cream-rgb), 0.35);
 }
 
 .form-field textarea {
