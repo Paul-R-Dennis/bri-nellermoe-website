@@ -498,6 +498,11 @@ a:hover { color: var(--gold-light); }
   outline-offset: 3px;
 }
 
+/* <picture> wrapper stays layout-neutral so the <img> sizes against its real parent */
+picture {
+  display: contents;
+}
+
 /* Honor the user's reduced-motion preference */
 @media (prefers-reduced-motion: reduce) {
   *,
