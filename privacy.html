@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="style.css">
   <script>!function(){var t=localStorage.getItem('bri-theme');if(t&&t!=='default')document.documentElement.setAttribute('data-theme',t)}();</script>
   <script src="themes.js" defer></script>
+  <script src="consent.js" defer></script>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥀</text></svg>">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
@@ -28,6 +29,19 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    // Consent Mode v2 — deny storage until the visitor chooses (GDPR)
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted',
+      wait_for_update: 500
+    });
+    if (localStorage.getItem('bri-consent') === 'granted') {
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+    }
     gtag('js', new Date());
     gtag('config', 'G-30GDJY8KCL');
   </script>
@@ -133,6 +147,7 @@
         <a href="books.html">Books</a>
         <a href="connect.html">Connect</a>
         <a href="privacy.html">Privacy</a>
+        <a href="#cookie-settings" data-cookie-settings>Cookie settings</a>
       </nav>
       <div class="footer-social">
         <a href="https://www.tiktok.com/@brinellermoe" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
