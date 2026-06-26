@@ -7,7 +7,23 @@
       "mcp__Claude_in_Chrome__get_page_text",
       "mcp__Claude_in_Chrome__navigate",
       "Bash(git add *)",
-      "mcp__Claude_Preview__preview_start"
+      "mcp__Claude_Preview__preview_start",
+      "mcp__eac7f7a6-e0c3-480b-9a13-caa3df46172d__notion-search",
+      "mcp__eac7f7a6-e0c3-480b-9a13-caa3df46172d__notion-fetch",
+      "mcp__eac7f7a6-e0c3-480b-9a13-caa3df46172d__notion-create-pages",
+      "mcp__eac7f7a6-e0c3-480b-9a13-caa3df46172d__notion-query-data-sources",
+      "mcp__eac7f7a6-e0c3-480b-9a13-caa3df46172d__notion-update-page",
+      "Read(//c/Users/pdenn/AppData/Local/Temp/claude/C--Projects-bri-nellermoe-website/bea71805-cb20-43a7-b76a-d4bf5d9e2e74/scratchpad/icongen/**)",
+      "Bash(node gen.mjs /c/Users/pdenn/AppData/Local/Temp/claude/C--Projects-bri-nellermoe-website/bea71805-cb20-43a7-b76a-d4bf5d9e2e74/scratchpad/icongen)",
+      "Bash(cp /c/Users/pdenn/AppData/Local/Temp/claude/C--Projects-bri-nellermoe-website/bea71805-cb20-43a7-b76a-d4bf5d9e2e74/scratchpad/icongen/apple-touch-icon.png /c/Projects/bri-nellermoe-website/apple-touch-icon.png)",
+      "Bash(cp /c/Users/pdenn/AppData/Local/Temp/claude/C--Projects-bri-nellermoe-website/bea71805-cb20-43a7-b76a-d4bf5d9e2e74/scratchpad/icongen/icon-192.png /c/Projects/bri-nellermoe-website/images/icon-192.png)",
+      "Bash(cp /c/Users/pdenn/AppData/Local/Temp/claude/C--Projects-bri-nellermoe-website/bea71805-cb20-43a7-b76a-d4bf5d9e2e74/scratchpad/icongen/icon-512.png /c/Projects/bri-nellermoe-website/images/icon-512.png)",
+      "Bash(cp /c/Users/pdenn/AppData/Local/Temp/claude/C--Projects-bri-nellermoe-website/bea71805-cb20-43a7-b76a-d4bf5d9e2e74/scratchpad/icongen/icon-maskable-512.png /c/Projects/bri-nellermoe-website/images/icon-maskable-512.png)",
+      "Bash(git commit -m ' *)",
+      "Bash(node -e ' *)",
+      "Bash(SP=\"/c/Users/pdenn/AppData/Local/Temp/claude/C--Projects-bri-nellermoe-website/bea71805-cb20-43a7-b76a-d4bf5d9e2e74/scratchpad/icongen\"; cp \"$SP/cover-q80.webp\" /c/Projects/bri-nellermoe-website/images/secrets-in-embers-cover.webp && ls -la /c/Projects/bri-nellermoe-website/images/secrets-in-embers-cover.*)",
+      "Bash(node --check consent.js)",
+      "Bash(node --check analytics.js)"
     ]
   }
 }
