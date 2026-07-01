@@ -2,3 +2,6 @@ TODO.md
 CHANGELOG.md
 BENCHMARKS.md
 CONTENT_DRAFTS.md
+
+# Claude Design exports/working files — not part of the deployed site
+*.zip
