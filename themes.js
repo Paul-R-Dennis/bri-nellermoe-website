@@ -1,9 +1,9 @@
 (function () {
   var THEMES = [
-    { id: 'default',   label: 'Midnight Navy',     bg: '#0D1B2A', accent: '#C9A84C' },
+    { id: 'default',   label: 'The Forest Between', bg: '#081408', accent: '#C4A030' },
+    { id: 'midnight',  label: 'Midnight Navy',      bg: '#0D1B2A', accent: '#C9A84C' },
     { id: 'ember',     label: 'Ember & Ash',        bg: '#160C08', accent: '#D4802A' },
     { id: 'obsidian',  label: 'Obsidian Court',     bg: '#080810', accent: '#B0A8D8' },
-    { id: 'forest',    label: 'The Forest Between', bg: '#081408', accent: '#C4A030' },
     { id: 'parchment', label: 'Faded Parchment',    bg: '#F5EDD8', accent: '#7A5A18' },
     { id: 'celestial', label: 'Celestial Ink',      bg: '#0A0818', accent: '#C0B8E0' },
     { id: 'gilded',    label: 'Gilded Opulence',    bg: '#0A0800', accent: '#E8B830' },

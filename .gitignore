@@ -5,3 +5,4 @@ CONTENT_DRAFTS.md
 
 # Claude Design exports/working files — not part of the deployed site
 *.zip
+_design_redesign_extract/

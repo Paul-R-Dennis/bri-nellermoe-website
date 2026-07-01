@@ -12,10 +12,11 @@
   <script src="/themes.js" defer></script>
   <script src="/consent.js" defer></script>
   <script src="/analytics.js" defer></script>
+  <script src="/embers.js" defer></script>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥀</text></svg>">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#0D1B2A">
+  <meta name="theme-color" content="#081408">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-30GDJY8KCL"></script>
   <script>
@@ -54,6 +55,14 @@
       <li><a href="/books.html">Books</a></li>
       <li><a href="/connect.html">Connect</a></li>
       <!-- Art link added here when ready -->
+      <li class="nav-drawer-social">
+        <a href="https://www.tiktok.com/@brinellermoe" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.7a8.18 8.18 0 004.78 1.52V6.77a4.85 4.85 0 01-1.01-.08z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/PLACEHOLDER" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+      </li>
     </ul>
     <div class="nav-social">
       <a href="https://www.tiktok.com/@brinellermoe" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
@@ -68,7 +77,7 @@
   <main id="main-content" class="page-content">
 
     <!-- 404 HERO -->
-    <header class="page-hero error-hero">
+    <header class="page-hero error-hero" style="background-image: linear-gradient(180deg, rgba(6,16,7,.9), rgba(8,20,8,.96)), url('/images/hero-bg.avif'); background-size: cover; background-position: center; min-height: 600px; align-items: center; text-align: center;" data-embers="22">
       <div class="page-hero-inner">
         <p class="error-code">404</p>
         <h1 class="page-title">This page slipped into the shadows</h1>
@@ -113,11 +122,13 @@
     const navLinks = document.getElementById('nav-links');
     toggle.addEventListener('click', () => {
       const open = navLinks.classList.toggle('open');
+      toggle.classList.toggle('open', open);
       toggle.setAttribute('aria-expanded', open);
     });
     navLinks.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         navLinks.classList.remove('open');
+        toggle.classList.remove('open');
         toggle.setAttribute('aria-expanded', false);
       });
     });
