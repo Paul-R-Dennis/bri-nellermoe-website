@@ -23,7 +23,16 @@
       "Bash(node -e ' *)",
       "Bash(SP=\"/c/Users/pdenn/AppData/Local/Temp/claude/C--Projects-bri-nellermoe-website/bea71805-cb20-43a7-b76a-d4bf5d9e2e74/scratchpad/icongen\"; cp \"$SP/cover-q80.webp\" /c/Projects/bri-nellermoe-website/images/secrets-in-embers-cover.webp && ls -la /c/Projects/bri-nellermoe-website/images/secrets-in-embers-cover.*)",
       "Bash(node --check consent.js)",
-      "Bash(node --check analytics.js)"
+      "Bash(node --check analytics.js)",
+      "Bash(find /c/Users/pdenn/AppData/Local/Temp/claude -iname \"audit.mjs\" 2>/dev/null)",
+      "Bash(node \"C:\\\\Users\\\\pdenn\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Projects-bri-nellermoe-website\\\\bea71805-cb20-43a7-b76a-d4bf5d9e2e74\\\\scratchpad\\\\audit.mjs\")",
+      "Bash(curl -s \"https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://brinellermoe.com/&strategy=mobile&category=performance\" -o /c/Users/pdenn/AppData/Local/Temp/claude/C--Projects-bri-nellermoe-website/28023634-bd64-4e18-9f13-76477f1d53dd/scratchpad/psi_mobile.json)",
+      "Bash(curl -s \"https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://brinellermoe.com/&strategy=desktop&category=performance\" -o /c/Users/pdenn/AppData/Local/Temp/claude/C--Projects-bri-nellermoe-website/28023634-bd64-4e18-9f13-76477f1d53dd/scratchpad/psi_desktop.json)",
+      "Bash(mkdir -p /c/Users/pdenn/AppData/Local/Temp/claude/C--Projects-bri-nellermoe-website/28023634-bd64-4e18-9f13-76477f1d53dd/scratchpad/ds-bri-nellermoe/assets /c/Users/pdenn/AppData/Local/Temp/claude/C--Projects-bri-nellermoe-website/28023634-bd64-4e18-9f13-76477f1d53dd/scratchpad/ds-bri-nellermoe/previews/foundations /c/Users/pdenn/AppData/Local/Temp/claude/C--Projects-bri-nellermoe-website/28023634-bd64-4e18-9f13-76477f1d53dd/scratchpad/ds-bri-nellermoe/previews/components /c/Users/pdenn/AppData/Local/Temp/claude/C--Projects-bri-nellermoe-website/28023634-bd64-4e18-9f13-76477f1d53dd/scratchpad/ds-bri-nellermoe/previews/sections /c/Users/pdenn/AppData/Local/Temp/claude/C--Projects-bri-nellermoe-website/28023634-bd64-4e18-9f13-76477f1d53dd/scratchpad/ds-bri-nellermoe/previews/patterns /c/Users/pdenn/AppData/Local/Temp/claude/C--Projects-bri-nellermoe-website/28023634-bd64-4e18-9f13-76477f1d53dd/scratchpad/ds-bri-nellermoe/previews/themes)",
+      "Bash(cp /c/Projects/bri-nellermoe-website/style.css /c/Users/pdenn/AppData/Local/Temp/claude/C--Projects-bri-nellermoe-website/28023634-bd64-4e18-9f13-76477f1d53dd/scratchpad/ds-bri-nellermoe/assets/style.css)",
+      "Bash(cp /c/Projects/bri-nellermoe-website/images/hero-bg.avif /c/Users/pdenn/AppData/Local/Temp/claude/C--Projects-bri-nellermoe-website/28023634-bd64-4e18-9f13-76477f1d53dd/scratchpad/ds-bri-nellermoe/assets/hero-bg.avif)",
+      "Bash(cp /c/Projects/bri-nellermoe-website/images/secrets-in-embers-cover.webp /c/Users/pdenn/AppData/Local/Temp/claude/C--Projects-bri-nellermoe-website/28023634-bd64-4e18-9f13-76477f1d53dd/scratchpad/ds-bri-nellermoe/assets/secrets-in-embers-cover.webp)",
+      "Bash(cp /c/Projects/bri-nellermoe-website/images/secrets-in-embers-cover.jpg /c/Users/pdenn/AppData/Local/Temp/claude/C--Projects-bri-nellermoe-website/28023634-bd64-4e18-9f13-76477f1d53dd/scratchpad/ds-bri-nellermoe/assets/secrets-in-embers-cover.jpg)"
     ]
   }
 }
