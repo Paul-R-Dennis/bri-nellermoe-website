@@ -1630,6 +1630,32 @@ section { padding: 6rem 3.75rem; }
   opacity: 0.4;
 }
 
+/* Kit's success/error alert ships with a bright white background and
+   light-gray text that clash with the dark panel; the "Built with Kit"
+   badge is also just a broken image here (Kit's logo failed to load) */
+.formkit-form[data-uid="30f0e69ab4"] .formkit-alert {
+  background: var(--navy) !important;
+  border-color: rgba(var(--gold-rgb), 0.3) !important;
+  color: var(--cream) !important;
+  font-family: var(--font-body) !important;
+}
+.formkit-form[data-uid="30f0e69ab4"] .formkit-alert-error {
+  background: rgba(196, 48, 48, 0.12) !important;
+  border-color: rgba(196, 48, 48, 0.5) !important;
+  color: #E8A0A0 !important;
+}
+.formkit-form[data-uid="30f0e69ab4"] .formkit-powered-by-convertkit {
+  background-image: none !important;
+  text-indent: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  color: var(--gold-dim) !important;
+  font-family: var(--font-body) !important;
+  font-size: 0.65rem !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+}
+
 /* ============================================================
    CONTACT FORM
    ============================================================ */
