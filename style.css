@@ -664,6 +664,43 @@ a:hover { color: var(--gold-light); }
 }
 
 /* ============================================================
+   LINK-IN-BIO PAGE
+   ============================================================ */
+.links-cover {
+  width: 128px;
+  aspect-ratio: 16 / 25;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  box-shadow: 8px 12px 40px rgba(0,0,0,0.55), 0 0 0 1px rgba(var(--gold-rgb), 0.2);
+  margin: 0 auto 1.75rem;
+}
+
+.links-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  width: 100%;
+  max-width: 380px;
+  margin: 2rem auto 0;
+}
+.links-stack .btn {
+  width: 100%;
+  padding: 16px 24px;
+}
+
+.links-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.75rem;
+  margin-top: 2.25rem;
+}
+.links-social a {
+  color: var(--cream-dim);
+  transition: color var(--transition);
+}
+.links-social a:hover { color: var(--gold-light); }
+
+/* ============================================================
    ACCESSIBILITY
    ============================================================ */
 /* Skip link — off-screen until keyboard-focused */
