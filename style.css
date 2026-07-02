@@ -290,20 +290,6 @@ a:hover { color: var(--gold-light); }
   background-image: url('images/hero-bg.avif');
   background-size: cover;
   background-position: center top;
-  isolation: isolate;
-}
-
-/* Color-grade the blue-gray forest photo to Forest Between green.
-   mix-blend-mode: color keeps the photo's light/detail but swaps its hue,
-   matching the approved design comp's green mist. Unsupported browsers
-   paint flat green instead, which the gradient above still darkens. */
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: #35624A;
-  mix-blend-mode: color;
-  pointer-events: none;
 }
 
 .hero-overlay {
