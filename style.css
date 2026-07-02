@@ -1,52 +1,38 @@
 /* ============================================================
    FONTS
    ============================================================ */
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,300..800;1,6..12,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Raleway:wght@300;400;500;600&display=swap');
 
 /* ============================================================
    TOKENS
    ============================================================ */
 :root {
-  /* Default palette — "Hearthlight" (2026-07 cozy/whimsical revamp).
-     Token names kept from the dark era (--navy = page bg, --cream = ink)
-     so the whole component layer re-themes without renaming. */
-  --burgundy:      #4E7E5B;
-  --burgundy-deep: #2E5540;
-  --navy:          #FAF3E2;
-  --navy-mid:      #F2E7CD;
-  --navy-light:    #EADCBC;
-  --forest:        #3C6B4F;
-  --gold:          #8F6420;
-  --gold-light:    #B07E28;
-  --gold-dim:      #6E4E16;
-  --cream:         #2A3B2E;
-  --cream-dim:     #4C5B44;
-  --text:          #384733;
-  --text-muted:    #5C6B4C;
+  /* Default palette — "The Forest Between" (2026-07 redesign) */
+  --burgundy:      #2A6030;
+  --burgundy-deep: #184020;
+  --navy:          #081408;
+  --navy-mid:      #0E2010;
+  --navy-light:    #162816;
+  --forest:        #1B3A2D;
+  --gold:          #C4A030;
+  --gold-light:    #E0BC45;
+  --gold-dim:      #807020;
+  --cream:         #F0ECCC;
+  --cream-dim:     #C8C490;
+  --text:          #E4E0BC;
+  --text-muted:    #96A068;
 
   /* RGB components for opacity variants */
-  --navy-rgb:      250, 243, 226;
-  --gold-rgb:      143, 100, 32;
-  --burgundy-rgb:  78, 126, 91;
-  --cream-rgb:     42, 59, 46;
+  --navy-rgb:      8, 20, 8;
+  --gold-rgb:      196, 160, 48;
+  --burgundy-rgb:  42, 96, 48;
+  --cream-rgb:     240, 236, 204;
 
-  /* Dusk bookends — dark sections (CTA band, footer, Kit panel) keep an
-     evening-forest feel; light ink tokens above are unreadable there */
-  --evergreen:          #234630;
-  --evergreen-deep:     #16301F;
-  --evergreen-text:     #F2ECD4;
-  --evergreen-text-dim: #C9D3AE;
-  --evergreen-gold:     #DFC06A;
-
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-body:    'Nunito Sans', system-ui, sans-serif;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Raleway', system-ui, sans-serif;
 
   --max-width: 1180px;
   --nav-height: 74px;
-
-  --radius-sm: 10px;
-  --radius-md: 18px;
-  --radius-pill: 999px;
 
   --transition: 0.25s ease;
 }
@@ -66,7 +52,7 @@ body {
   background-color: var(--navy);
   color: var(--text);
   font-family: var(--font-body);
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1rem;
   line-height: 1.75;
   min-height: 100vh;
@@ -338,7 +324,7 @@ a:hover { color: var(--gold-light); }
   color: var(--cream);
   letter-spacing: 0.04em;
   margin-bottom: 1.25rem;
-  text-shadow: 0 2px 28px rgba(var(--navy-rgb), 0.85);
+  text-shadow: 0 4px 40px rgba(0,0,0,0.6);
 }
 
 .hero-tagline {
@@ -359,11 +345,10 @@ a:hover { color: var(--gold-light); }
 }
 .hero-email-form input[type="email"] {
   flex: 1;
-  padding: 0.7rem 1.2rem;
-  background: rgba(var(--navy-rgb), 0.8);
+  padding: 0.7rem 1rem;
+  background: rgba(var(--navy-rgb), 0.7);
   border: 1px solid rgba(var(--gold-rgb), 0.4);
   border-right: none;
-  border-radius: var(--radius-pill) 0 0 var(--radius-pill);
   color: var(--cream);
   font-family: var(--font-body);
   font-size: 0.85rem;
@@ -376,11 +361,10 @@ a:hover { color: var(--gold-light); }
   border-color: var(--gold);
 }
 .hero-email-form button {
-  padding: 0.7rem 1.4rem;
+  padding: 0.7rem 1.2rem;
   background: var(--gold);
   color: var(--navy);
   border: none;
-  border-radius: 0 var(--radius-pill) var(--radius-pill) 0;
   font-family: var(--font-body);
   font-size: 0.75rem;
   font-weight: 700;
@@ -423,8 +407,7 @@ a:hover { color: var(--gold-light); }
   height: auto;
   object-fit: cover;
   transform: rotate(-1.5deg);
-  border-radius: var(--radius-sm);
-  box-shadow: 12px 18px 48px rgba(62, 48, 18, 0.32), 0 0 0 1px rgba(var(--gold-rgb), 0.2);
+  box-shadow: 14px 22px 64px rgba(0,0,0,0.72), 0 0 0 1px rgba(var(--gold-rgb), 0.2);
 }
 
 .hero-scroll {
@@ -505,7 +488,6 @@ a:hover { color: var(--gold-light); }
    ============================================================ */
 .btn {
   display: inline-block;
-  border-radius: var(--radius-pill);
   padding: 15px 38px;
   font-family: var(--font-body);
   font-size: 0.75rem;
@@ -602,12 +584,12 @@ a:hover { color: var(--gold-light); }
   justify-content: center;
   text-align: center;
   overflow: hidden;
-  background: radial-gradient(ellipse 820px 560px at 50% 42%, rgba(var(--burgundy-rgb), 0.25), var(--navy) 72%);
+  background: radial-gradient(ellipse 820px 560px at 50% 42%, rgba(27, 58, 45, 0.85), var(--navy) 72%);
 }
 .confirmed-hero-bg {
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(180deg, rgba(var(--navy-rgb), 0.55), rgba(var(--navy-rgb), 0.9)), url('images/hero-bg.avif');
+  background-image: linear-gradient(180deg, rgba(8,20,8,0.6), rgba(8,20,8,0.9)), url('images/hero-bg.avif');
   background-size: cover;
   background-position: center;
   opacity: 0.22;
@@ -629,7 +611,7 @@ a:hover { color: var(--gold-light); }
   letter-spacing: 0.04em;
   line-height: 1;
   margin: 0 0 1.25rem;
-  text-shadow: 0 2px 28px rgba(var(--navy-rgb), 0.85);
+  text-shadow: 0 6px 44px rgba(0,0,0,0.6);
 }
 .confirmed-tagline {
   font-family: var(--font-display);
@@ -707,8 +689,7 @@ picture {
   padding: 1.1rem 1.4rem;
   background: rgba(var(--navy-rgb), 0.97);
   border: 1px solid rgba(var(--gold-rgb), 0.4);
-  border-radius: var(--radius-md);
-  box-shadow: 0 12px 36px rgba(62, 48, 18, 0.28);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
   opacity: 0;
   transform: translateY(12px);
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -744,7 +725,6 @@ picture {
   padding: 0.6rem 1.4rem;
   cursor: pointer;
   border: 1px solid var(--gold);
-  border-radius: var(--radius-pill);
   transition: background var(--transition), color var(--transition);
 }
 .cookie-btn-reject {
@@ -846,8 +826,7 @@ section { padding: 6rem 3.75rem; }
   aspect-ratio: 16 / 25;
   height: auto;
   object-fit: cover;
-  border-radius: var(--radius-sm);
-  box-shadow: 10px 14px 42px rgba(62, 48, 18, 0.28), 0 0 0 1px rgba(var(--gold-rgb), 0.16);
+  box-shadow: 10px 16px 54px rgba(0,0,0,0.66), 0 0 0 1px rgba(var(--gold-rgb), 0.16);
   display: block;
 }
 
@@ -861,7 +840,7 @@ section { padding: 6rem 3.75rem; }
   justify-content: center;
   flex-direction: column;
   gap: 0.5rem;
-  box-shadow: 8px 12px 40px rgba(62, 48, 18, 0.25);
+  box-shadow: 8px 12px 48px rgba(0,0,0,0.6);
   color: var(--gold-dim);
   font-family: var(--font-display);
   font-size: 1.1rem;
@@ -980,7 +959,7 @@ section { padding: 6rem 3.75rem; }
    HOME CTA BAND
    ============================================================ */
 .cta-band {
-  background: linear-gradient(135deg, var(--evergreen-deep), var(--evergreen));
+  background: linear-gradient(135deg, var(--burgundy-deep), var(--navy-mid));
   text-align: center;
   padding: 5rem 2rem;
   position: relative;
@@ -998,20 +977,14 @@ section { padding: 6rem 3.75rem; }
   font-size: clamp(1.8rem, 4vw, 2.8rem);
   font-weight: 300;
   font-style: italic;
-  color: var(--evergreen-text);
+  color: var(--cream);
   margin-bottom: 0.75rem;
 }
 .cta-band-sub {
-  color: var(--evergreen-text-dim);
+  color: var(--cream-dim);
   font-size: 0.9rem;
   margin-bottom: 2rem;
 }
-/* Dark band: outline buttons and the inline email form need the light ink */
-.cta-band .btn { border-color: var(--evergreen-gold); color: var(--evergreen-gold); }
-.cta-band .btn::before { background: var(--evergreen-gold); }
-.cta-band .btn:hover { color: var(--evergreen-deep); }
-.cta-band .hero-email-form button { background: var(--evergreen-gold); color: var(--evergreen-deep); }
-.cta-band .hero-email-form input[type="email"] { color: var(--cream); }
 
 /* ============================================================
    INNER PAGE HERO (about / books / connect)
@@ -1084,8 +1057,7 @@ section { padding: 6rem 3.75rem; }
   aspect-ratio: 1/1;
   object-fit: cover;
   object-position: top;
-  border-radius: var(--radius-md);
-  box-shadow: 6px 10px 34px rgba(62, 48, 18, 0.24), 0 0 0 1px rgba(var(--gold-rgb), 0.1);
+  box-shadow: 6px 10px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(var(--gold-rgb), 0.1);
 }
 
 .author-photo-placeholder {
@@ -1094,13 +1066,12 @@ section { padding: 6rem 3.75rem; }
   background-color: var(--navy-mid);
   background-image: repeating-linear-gradient(135deg, rgba(var(--gold-rgb), 0.06) 0, rgba(var(--gold-rgb), 0.06) 2px, transparent 2px, transparent 12px);
   border: 1px solid rgba(var(--gold-rgb), 0.2);
-  border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 10px;
-  box-shadow: 6px 10px 34px rgba(62, 48, 18, 0.2);
+  box-shadow: 6px 10px 40px rgba(0,0,0,0.5);
 }
 .author-photo-placeholder .placeholder-label {
   font-family: ui-monospace, Menlo, monospace;
@@ -1180,8 +1151,7 @@ section { padding: 6rem 3.75rem; }
   aspect-ratio: 16 / 25;
   height: auto;
   object-fit: cover;
-  border-radius: var(--radius-sm);
-  box-shadow: 10px 14px 44px rgba(62, 48, 18, 0.28), 0 0 0 1px rgba(var(--gold-rgb), 0.18);
+  box-shadow: 10px 16px 56px rgba(0,0,0,0.66), 0 0 0 1px rgba(var(--gold-rgb), 0.18);
 }
 .book-cover-lg-placeholder {
   width: 100%;
@@ -1198,7 +1168,7 @@ section { padding: 6rem 3.75rem; }
   font-size: 1.1rem;
   text-align: center;
   padding: 2rem;
-  box-shadow: 10px 16px 48px rgba(62, 48, 18, 0.25);
+  box-shadow: 10px 16px 60px rgba(0,0,0,0.6);
 }
 .book-cover-ornament {
   font-size: 2rem;
@@ -1265,7 +1235,6 @@ section { padding: 6rem 3.75rem; }
   text-transform: uppercase;
   color: var(--cream-dim);
   border: 1px solid rgba(var(--gold-rgb), 0.2);
-  border-radius: var(--radius-pill);
   padding: 0.7rem 1.25rem;
   transition: border-color var(--transition), color var(--transition), background var(--transition);
 }
@@ -1278,7 +1247,6 @@ section { padding: 6rem 3.75rem; }
   text-align: center;
   padding: 3.5rem;
   border: 1px solid rgba(var(--gold-rgb), 0.15);
-  border-radius: var(--radius-md);
   background: rgba(var(--navy-rgb), 0.6);
 }
 .coming-soon-card .corner {
@@ -1395,7 +1363,6 @@ section { padding: 6rem 3.75rem; }
   gap: 1.25rem;
   padding: 1.1rem 1.5rem;
   border: 1px solid rgba(var(--gold-rgb), 0.15);
-  border-radius: var(--radius-md);
   color: var(--cream-dim);
   transition: border-color var(--transition), color var(--transition), background var(--transition);
 }
@@ -1446,8 +1413,6 @@ section { padding: 6rem 3.75rem; }
   text-transform: uppercase;
   color: var(--gold-dim);
   border: 1px solid rgba(var(--gold-rgb), 0.28);
-  border-radius: var(--radius-pill);
-  background: rgba(var(--gold-rgb), 0.05);
   padding: 6px 14px;
 }
 
@@ -1457,8 +1422,6 @@ section { padding: 6rem 3.75rem; }
 .kit-panel {
   border: 1px solid rgba(var(--gold-rgb), 0.2);
   background: var(--navy-mid);
-  border-radius: var(--radius-md);
-  overflow: hidden;
   padding: 2.25rem;
 }
 .kit-panel-intro {
@@ -1474,7 +1437,7 @@ section { padding: 6rem 3.75rem; }
    FOOTER
    ============================================================ */
 .site-footer {
-  background: var(--evergreen-deep);
+  background: var(--navy);
   border-top: 1px solid rgba(var(--gold-rgb), 0.1);
   padding: 3rem 2rem;
   text-align: center;
@@ -1491,7 +1454,7 @@ section { padding: 6rem 3.75rem; }
   font-family: var(--font-display);
   font-size: 1.5rem;
   font-weight: 400;
-  color: var(--evergreen-text);
+  color: var(--cream-dim);
   letter-spacing: 0.08em;
 }
 .footer-nav {
@@ -1504,16 +1467,13 @@ section { padding: 6rem 3.75rem; }
   font-size: 0.72rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--evergreen-text-dim);
+  color: var(--text-muted);
 }
-.footer-nav a:hover { color: var(--evergreen-gold); }
-.footer-social a { color: var(--evergreen-text-dim); }
-.footer-social a:hover { color: var(--evergreen-gold); }
+.footer-nav a:hover { color: var(--gold); }
 .footer-copy {
   font-size: 0.72rem;
-  color: var(--evergreen-text-dim);
+  color: var(--text-muted);
   letter-spacing: 0.05em;
-  opacity: 0.85;
 }
 
 /* ============================================================
@@ -1559,11 +1519,11 @@ section { padding: 6rem 3.75rem; }
 }
 .formkit-form[data-uid="30f0e69ab4"] .formkit-header h2 {
   font-family: var(--font-display) !important;
-  color: var(--evergreen-text) !important;
+  color: var(--cream) !important;
   letter-spacing: 0.08em !important;
 }
 .formkit-form[data-uid="30f0e69ab4"] .formkit-subheader p {
-  color: var(--evergreen-gold) !important;
+  color: var(--gold-light) !important;
   font-style: italic !important;
   font-family: var(--font-display) !important;
 }
@@ -1598,6 +1558,254 @@ section { padding: 6rem 3.75rem; }
 }
 
 /* ============================================================
+   THEME SWITCHER UI
+   ============================================================ */
+.theme-switcher {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 9999;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  width: 168px;
+  background: var(--navy-light);
+  border: 1px solid rgba(var(--gold-rgb), 0.3);
+  backdrop-filter: blur(8px);
+  padding: 0.5rem 0.6rem;
+}
+
+.theme-switcher-label {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+  white-space: nowrap;
+}
+
+.theme-swatch {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: border-color 0.2s, transform 0.2s;
+  flex-shrink: 0;
+}
+.theme-swatch:hover  { transform: scale(1.15); }
+.theme-swatch.active { border-color: var(--gold); transform: scale(1.1); }
+
+/* ============================================================
+   THEME: EMBER & ASH
+   ============================================================ */
+[data-theme="ember"] {
+  --burgundy:      #A03010;
+  --burgundy-deep: #6B1A00;
+  --navy:          #160C08;
+  --navy-mid:      #241410;
+  --navy-light:    #341E14;
+  --forest:        #2E180A;
+  --gold:          #D4802A;
+  --gold-light:    #E8982A;
+  --gold-dim:      #9A5A18;
+  --cream:         #F5E4CC;
+  --cream-dim:     #D4AA78;
+  --text:          #EEDCC4;
+  --text-muted:    #B08060;
+  --navy-rgb:      22, 12, 8;
+  --gold-rgb:      212, 128, 42;
+  --burgundy-rgb:  160, 48, 16;
+  --cream-rgb:     245, 228, 204;
+}
+
+/* ============================================================
+   THEME: OBSIDIAN COURT
+   ============================================================ */
+[data-theme="obsidian"] {
+  --burgundy:      #5A1A7A;
+  --burgundy-deep: #380E52;
+  --navy:          #080810;
+  --navy-mid:      #100D1E;
+  --navy-light:    #181428;
+  --forest:        #1A1030;
+  --gold:          #B0A8D8;
+  --gold-light:    #D0C8F0;
+  --gold-dim:      #706890;
+  --cream:         #ECE8F8;
+  --cream-dim:     #B8B0D0;
+  --text:          #E0DCF0;
+  --text-muted:    #9090B8;
+  --navy-rgb:      8, 8, 16;
+  --gold-rgb:      176, 168, 216;
+  --burgundy-rgb:  90, 26, 122;
+  --cream-rgb:     236, 232, 248;
+}
+
+/* ============================================================
+   THEME: MIDNIGHT NAVY (original default, now selectable)
+   ============================================================ */
+[data-theme="midnight"] {
+  --burgundy:      #6B1E2A;
+  --burgundy-deep: #4A1219;
+  --navy:          #0D1B2A;
+  --navy-mid:      #152338;
+  --navy-light:    #1E3050;
+  --forest:        #1B3A2D;
+  --gold:          #C9A84C;
+  --gold-light:    #E0C97A;
+  --gold-dim:      #8A6F2E;
+  --cream:         #F0E8D8;
+  --cream-dim:     #C8BAA4;
+  --text:          #E8DFD0;
+  --text-muted:    #9E9282;
+  --navy-rgb:      13, 27, 42;
+  --gold-rgb:      201, 168, 76;
+  --burgundy-rgb:  107, 30, 42;
+  --cream-rgb:     240, 232, 216;
+}
+
+/* ============================================================
+   THEME: FADED PARCHMENT
+   ============================================================ */
+[data-theme="parchment"] {
+  --burgundy:      #7A1E2A;
+  --burgundy-deep: #521018;
+  --navy:          #F5EDD8;
+  --navy-mid:      #EDE0C4;
+  --navy-light:    #E5D4B0;
+  --forest:        #2A4A30;
+  --gold:          #7A5A18;
+  --gold-light:    #9A7020;
+  --gold-dim:      #5A4210;
+  --cream:         #1E1610;
+  --cream-dim:     #3A2E20;
+  --text:          #2A2018;
+  --text-muted:    #6A5840;
+  --navy-rgb:      245, 237, 216;
+  --gold-rgb:      122, 90, 24;
+  --burgundy-rgb:  122, 30, 42;
+  --cream-rgb:     30, 22, 16;
+}
+
+/* ============================================================
+   THEME: CELESTIAL INK
+   ============================================================ */
+[data-theme="celestial"] {
+  --burgundy:      #3A1860;
+  --burgundy-deep: #220E40;
+  --navy:          #0A0818;
+  --navy-mid:      #100E24;
+  --navy-light:    #181630;
+  --forest:        #1A1040;
+  --gold:          #C0B8E0;
+  --gold-light:    #E0D8F8;
+  --gold-dim:      #7870A0;
+  --cream:         #F0EEF8;
+  --cream-dim:     #C0B8D8;
+  --text:          #E8E4F4;
+  --text-muted:    #9890B8;
+  --navy-rgb:      10, 8, 24;
+  --gold-rgb:      192, 184, 224;
+  --burgundy-rgb:  58, 24, 96;
+  --cream-rgb:     240, 238, 248;
+}
+
+/* ============================================================
+   THEME: GILDED OPULENCE
+   ============================================================ */
+[data-theme="gilded"] {
+  --burgundy:      #3A2800;
+  --burgundy-deep: #280E00;
+  --navy:          #0A0800;
+  --navy-mid:      #140E00;
+  --navy-light:    #1E1800;
+  --forest:        #1A1400;
+  --gold:          #E8B830;
+  --gold-light:    #F8D040;
+  --gold-dim:      #A88020;
+  --cream:         #FFF8E8;
+  --cream-dim:     #E8D8A0;
+  --text:          #F8EED0;
+  --text-muted:    #C8A860;
+  --navy-rgb:      10, 8, 0;
+  --gold-rgb:      232, 184, 48;
+  --burgundy-rgb:  58, 40, 0;
+  --cream-rgb:     255, 248, 232;
+}
+
+/* ============================================================
+   THEME: CRIMSON COURT
+   ============================================================ */
+[data-theme="crimson"] {
+  --burgundy:      #8A0E1A;
+  --burgundy-deep: #5C0810;
+  --navy:          #1A0408;
+  --navy-mid:      #240810;
+  --navy-light:    #340A14;
+  --forest:        #2A0808;
+  --gold:          #D4AA40;
+  --gold-light:    #ECC840;
+  --gold-dim:      #8A6820;
+  --cream:         #F8E8E0;
+  --cream-dim:     #D8A898;
+  --text:          #F0E0D8;
+  --text-muted:    #B07868;
+  --navy-rgb:      26, 4, 8;
+  --gold-rgb:      212, 170, 64;
+  --burgundy-rgb:  138, 14, 26;
+  --cream-rgb:     248, 232, 224;
+}
+
+/* ============================================================
+   THEME: ROSE & THORN
+   ============================================================ */
+[data-theme="rose"] {
+  --burgundy:      #8A3050;
+  --burgundy-deep: #5A1A30;
+  --navy:          #100810;
+  --navy-mid:      #180E18;
+  --navy-light:    #241420;
+  --forest:        #2A1020;
+  --gold:          #D4A860;
+  --gold-light:    #E8C078;
+  --gold-dim:      #907040;
+  --cream:         #F8EEF0;
+  --cream-dim:     #D8B8C0;
+  --text:          #F0E4E8;
+  --text-muted:    #A88090;
+  --navy-rgb:      16, 8, 16;
+  --gold-rgb:      212, 168, 96;
+  --burgundy-rgb:  138, 48, 80;
+  --cream-rgb:     248, 238, 240;
+}
+
+/* ============================================================
+   THEME: SILVER SMOKE
+   ============================================================ */
+[data-theme="silver"] {
+  --burgundy:      #304050;
+  --burgundy-deep: #202838;
+  --navy:          #141820;
+  --navy-mid:      #1C2030;
+  --navy-light:    #282C3C;
+  --forest:        #283040;
+  --gold:          #A0B0C0;
+  --gold-light:    #C0D0E0;
+  --gold-dim:      #607080;
+  --cream:         #E8EEF4;
+  --cream-dim:     #A8B8C8;
+  --text:          #D8E4EE;
+  --text-muted:    #809098;
+  --navy-rgb:      20, 24, 32;
+  --gold-rgb:      160, 176, 192;
+  --burgundy-rgb:  48, 64, 80;
+  --cream-rgb:     232, 238, 244;
+}
+
+/* ============================================================
    CONTACT FORM
    ============================================================ */
 .form-field {
@@ -1617,9 +1825,8 @@ section { padding: 6rem 3.75rem; }
 
 .form-field input,
 .form-field textarea {
-  background: rgba(255, 255, 255, 0.45);
+  background: rgba(var(--navy-rgb), 0.25);
   border: 1px solid rgba(var(--gold-rgb), 0.3);
-  border-radius: var(--radius-sm);
   color: var(--cream);
   font-family: var(--font-body);
   font-size: 1rem;
@@ -1645,7 +1852,6 @@ section { padding: 6rem 3.75rem; }
 .form-submit {
   background: transparent;
   border: 1px solid var(--gold);
-  border-radius: var(--radius-pill);
   color: var(--gold);
   cursor: pointer;
   font-family: var(--font-body);

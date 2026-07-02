@@ -41,8 +41,7 @@
       "Bash(npx --yes sharp-cli --version)",
       "Bash(npx --yes sharp-cli -i /c/Projects/bri-nellermoe-website/images/secrets-in-embers-cover-v2.png -o /c/Projects/bri-nellermoe-website/images/secrets-in-embers-cover-v2.jpg -f jpeg -- resize 960 --q 85)",
       "Bash(node --check embers.js)",
-      "Bash(node --check themes.js)",
-      "PowerShell(git fetch origin)"
+      "Bash(node --check themes.js)"
     ]
   }
 }
