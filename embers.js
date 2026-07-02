@@ -1,7 +1,9 @@
 (function () {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  var HUES = ['#C4A030', '#E0BC45'];
+  // Warm amber "sunlit dust mote / firefly" hues — visible on the light
+  // Hearthlight hero mist and glowing on the dark dusk bands
+  var HUES = ['#C89540', '#E3BC5E'];
 
   function seededRandom(seed) {
     var x = Math.sin(seed) * 43758.5453;
