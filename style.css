@@ -205,6 +205,14 @@ a:hover { color: var(--gold-light); }
 }
 
 @media (max-width: 680px) {
+  /* backdrop-filter makes .site-nav the containing block for fixed
+     descendants, trapping the full-screen drawer inside the 60px bar.
+     The nav is 97% opaque here, so dropping the blur is invisible. */
+  .site-nav {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
   .nav-toggle { display: flex; width: 44px; height: 44px; }
   .nav-toggle.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
   .nav-toggle.open span:nth-child(2) { opacity: 0; }
@@ -229,6 +237,7 @@ a:hover { color: var(--gold-light); }
     opacity: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
     pointer-events: none;
+    overflow-y: auto;
   }
   .nav-links.open {
     transform: translateY(0);
@@ -1566,6 +1575,17 @@ section { padding: 6rem 3.75rem; }
 }
 .formkit-form[data-uid="30f0e69ab4"] .formkit-column:first-of-type {
   background-color: var(--burgundy-deep) !important;
+  /* Kit hard-codes height:480px inline and bottom-anchors the content;
+     Fraunces renders taller than the old font and the headline clipped
+     out the top. Size to content instead. */
+  height: auto !important;
+  max-height: none !important;
+  justify-content: center !important;
+  padding: 48px 30px !important;
+}
+.formkit-form[data-uid="30f0e69ab4"] .formkit-header h2 {
+  font-size: 27px !important;
+  line-height: 1.2 !important;
 }
 .formkit-form[data-uid="30f0e69ab4"] .formkit-column:last-of-type {
   background-color: var(--navy) !important;
