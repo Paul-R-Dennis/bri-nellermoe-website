@@ -281,6 +281,20 @@ a:hover { color: var(--gold-light); }
   background-image: url('images/hero-bg.avif');
   background-size: cover;
   background-position: center top;
+  isolation: isolate;
+}
+
+/* Color-grade the blue-gray forest photo to Forest Between green.
+   mix-blend-mode: color keeps the photo's light/detail but swaps its hue,
+   matching the approved design comp's green mist. Unsupported browsers
+   paint flat green instead, which the gradient above still darkens. */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #35624A;
+  mix-blend-mode: color;
+  pointer-events: none;
 }
 
 .hero-overlay {
@@ -288,9 +302,9 @@ a:hover { color: var(--gold-light); }
   inset: 0;
   background: linear-gradient(
     105deg,
-    rgba(var(--navy-rgb), 0.98) 0%,
-    rgba(var(--navy-rgb), 0.9) 44%,
-    rgba(var(--navy-rgb), 0.66) 100%
+    rgba(6, 16, 7, 0.98) 0%,
+    rgba(7, 18, 9, 0.9) 44%,
+    rgba(11, 26, 14, 0.66) 100%
   );
 }
 .hero-overlay::after {
@@ -331,7 +345,7 @@ a:hover { color: var(--gold-light); }
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(3.5rem, 7vw, 6.5rem);
+  font-size: clamp(3.25rem, 5.5vw, 5.25rem);
   font-weight: 300;
   line-height: 1.0;
   color: var(--cream);
