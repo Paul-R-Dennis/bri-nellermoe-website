@@ -1,6 +1,7 @@
 (function () {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
+  // Ember hues matched to The Forest Between gold accents
   var HUES = ['#C4A030', '#E0BC45'];
 
   function seededRandom(seed) {
