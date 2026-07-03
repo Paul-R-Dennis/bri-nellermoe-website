@@ -915,13 +915,6 @@ section { padding: 6rem 3.75rem; }
   padding: 2rem;
 }
 
-.book-glow {
-  position: absolute;
-  inset: -24px;
-  background: radial-gradient(ellipse at center, rgba(var(--gold-rgb), 0.22), transparent 70%);
-  pointer-events: none;
-}
-
 .star-rating {
   display: flex;
   align-items: center;
