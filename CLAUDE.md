@@ -1,7 +1,7 @@
 # Bri Nellermoe Author Website
 
 ## Project
-Author website for Bri Nellermoe, self-published romantasy author. Plain HTML/CSS/JS. Hosted on GitHub Pages.
+Author website for Bri Nellermoe, independent author who writes romantasy and the adjacent micro-genres she's exploring. Plain HTML/CSS/JS. Hosted on GitHub Pages. Do NOT describe her as "self-published" — she uses "independent author."
 
 ## Pages
 - `index.html` — Home: hero, tagline, featured book, email CTA
@@ -11,24 +11,25 @@ Author website for Bri Nellermoe, self-published romantasy author. Plain HTML/CS
 - Nav must have a slot for a 5th link (Art) without restructuring
 
 ## Design
-Dark, moody, maximalist romantasy. Jewel tones: burgundy, midnight navy, forest green, gold accents. Serif display font for headings, clean body font. Atmospheric — old library meets fantasy court. Not minimalist.
+Cozy, whimsical romantasy with an enchanted-forest feel — warm, not dark or grim. Brand voice is "a little magic, a lot of heart." Visual palette is "The Forest Between": deep forest-green base (#081408) with gold accents. Fraunces (variable serif) for display headings, Nunito Sans for body. Rounded cards/buttons/covers, pill-shaped tags. Atmospheric but inviting. The old "dark/moody/burgundy/midnight-navy" direction was retired — do not reintroduce it.
 
 ## Images
-Place in `/images/` before deploying:
-- `hero-bg.jpg` — 1920×1080px min
-- `bri-headshot.jpg` — 800×800px
-- `secrets-in-embers-cover.jpg` — 400×600px
+Current assets in `/images/` (all local, relative paths):
+- `hero-bg.avif` — hero background, green grade baked in
+- `bri-headshot.webp` — author photo (still placeholder art, not final)
+- `secrets-in-embers-cover-v2.jpg` / `.webp` / `.png` — current book cover (served via `<picture>`)
+- `og-share.jpg` — 1200×630 social share card
 
 CSS should degrade gracefully if images are missing.
 
 ## Content Placeholders
-The following are not yet confirmed — use placeholders:
-- Bri's bio
-- *Secrets in Embers* blurb and buy links
-- Second book title and teaser
-- TikTok URL
-- Instagram URL
-- Kit email embed code
+Still unconfirmed — keep placeholders until Bri provides:
+- Full bio (about.html shows a "bio in progress" box; first line + one paragraph are real)
+- *Secrets in Embers* blurb/synopsis (index.html + books.html show a "blurb pending" box)
+- Second book title and teaser (coming-soon card)
+- Instagram URL (`@PLACEHOLDER` site-wide)
+
+Already confirmed/live (not placeholders): buy links (Amazon + Books2Read), TikTok URL (@brinellermoe), Goodreads profile, Kit email embed + double opt-in.
 
 ## Communication Preferences
 - No filler, no reinforcement, no restating what was asked
