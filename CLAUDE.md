@@ -1,7 +1,7 @@
 # Bri Nellermoe Author Website
 
 ## Project
-Author website for Bri Nellermoe, independent author who writes romantasy and the adjacent micro-genres she's exploring. Plain HTML/CSS/JS. Hosted on GitHub Pages. Do NOT describe her as "self-published" — she uses "independent author."
+Author website for Bri Nellermoe, independent author. Her debut is romantasy (Secrets in Embers), and she writes across multiple genres; she has loved fantasy, romance, and ghost stories all her life. Outside writing she works as a nurse and has a full house of pets (two dogs, two cats, leopard gecko, fish) - personal color for the bio only, keep it out of site-wide branding. Plain HTML/CSS/JS. Hosted on GitHub Pages. Do NOT describe her as "self-published" — she uses "independent author."
 
 ## Pages
 - `index.html` — Home: hero, tagline, featured book, email CTA
@@ -16,7 +16,8 @@ Cozy, whimsical romantasy with an enchanted-forest feel — warm, not dark or gr
 ## Images
 Current assets in `/images/` (all local, relative paths):
 - `hero-bg.avif` — hero background, green grade baked in
-- `bri-headshot.webp` — author photo (still placeholder art, not final)
+- `bri-headshot.webp` — author photo, FINAL (real photo from Bri, 2026-08-23; 800×800 square crop, EXIF stripped)
+- `bri-nellermoe-headshot.jpg` — hi-res press headshot (1242×2208, EXIF stripped), download link on press.html
 - `secrets-in-embers-cover-v2.jpg` / `.webp` / `.png` — current book cover (served via `<picture>`)
 - `og-share.jpg` — 1200×630 social share card
 
@@ -24,12 +25,11 @@ CSS should degrade gracefully if images are missing.
 
 ## Content Placeholders
 Still unconfirmed — keep placeholders until Bri provides:
-- Full bio (about.html shows a "bio in progress" box; first line + one paragraph are real)
 - *Secrets in Embers* blurb/synopsis (index.html + books.html show a "blurb pending" box)
 - Second book title and teaser (coming-soon card)
 - Instagram URL (`@PLACEHOLDER` site-wide)
 
-Already confirmed/live (not placeholders): buy links (Amazon + Books2Read), TikTok URL (@brinellermoe), Goodreads profile, Kit email embed + double opt-in.
+Already confirmed/live (not placeholders): full bio (Bri's own words, on about.html + press.html since 2026-08-23), final author headshot, buy links (Amazon + Books2Read), TikTok URL (@brinellermoe), Goodreads profile, Kit email embed + double opt-in.
 
 ## Communication Preferences
 - No filler, no reinforcement, no restating what was asked
