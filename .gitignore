@@ -6,3 +6,6 @@ CONTENT_DRAFTS.md
 # Claude Design exports/working files — not part of the deployed site
 *.zip
 _design_redesign_extract/
+
+# Local build tools (press sheet generator etc.) — not part of the deployed site
+_tools/
