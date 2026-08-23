@@ -1797,3 +1797,10 @@ section { padding: 6rem 3.75rem; }
   color: var(--gold);
 }
 
+
+/* TEMP: Instagram is undecided (2026-08-23) - hide every IG link while the
+   placeholder URL is live. Restore by swapping in the real URL and deleting
+   this rule. */
+a[href="https://www.instagram.com/PLACEHOLDER"] {
+  display: none !important;
+}
