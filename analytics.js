@@ -1,6 +1,9 @@
 // Lightweight GA4 event tracking. Consent is handled upstream by Google Consent
 // Mode v2 (see the inline gtag snippet + consent.js): when analytics is denied,
 // gtag sends anonymized cookieless pings; full analytics only after Accept.
+//
+// Links are matched by URL rather than CSS class, so any new buy or social link
+// is tracked automatically no matter how it's styled.
 (function () {
   function track(name, params) {
     if (typeof window.gtag === 'function') {
@@ -8,34 +11,69 @@
     }
   }
 
-  // Buy links (e.g., Amazon) — purchase intent
-  document.querySelectorAll('.buy-link').forEach(function (el) {
-    el.addEventListener('click', function () {
-      track('buy_link_click', {
-        retailer: (el.textContent || '').trim(),
-        link_url: el.href
+  function match(href, table) {
+    for (var i = 0; i < table.length; i++) {
+      if (table[i][0].test(href)) return table[i][1];
+    }
+    return null;
+  }
+
+  function linkText(el) {
+    return (el.textContent || el.getAttribute('aria-label') || '').replace(/\s+/g, ' ').trim();
+  }
+
+  var RETAILERS = [
+    [/amazon\./i, 'Amazon'],
+    [/barnesandnoble\.com/i, 'Barnes & Noble'],
+    [/books2read\.com/i, 'Books2Read']
+  ];
+
+  var SOCIAL = [
+    [/tiktok\.com/i, 'TikTok'],
+    [/instagram\.com/i, 'Instagram'],
+    [/goodreads\.com/i, 'Goodreads']
+  ];
+
+  // Where on the page a social link sits
+  function socialLocation(el) {
+    return el.closest('.nav-social') ? 'nav'
+         : el.closest('.nav-drawer-social') ? 'nav_drawer'
+         : el.closest('.footer-social') ? 'footer'
+         : el.closest('.links-social') ? 'links_page'
+         : el.closest('.social-links') ? 'social_links'
+         : 'inline';
+  }
+
+  document.querySelectorAll('a[href]').forEach(function (el) {
+    var href = el.href || '';
+
+    // Buy links (Amazon, B&N, Books2Read) — purchase intent
+    var retailer = match(href, RETAILERS);
+    if (retailer) {
+      el.addEventListener('click', function () {
+        track('buy_link_click', {
+          retailer: retailer,
+          link_text: linkText(el),
+          link_url: href
+        });
       });
-    });
+      return;
+    }
+
+    // Social links (nav, mobile drawer, footer, Connect page, links page, inline)
+    var platform = match(href, SOCIAL);
+    if (platform) {
+      el.addEventListener('click', function () {
+        track('social_click', { platform: platform, location: socialLocation(el) });
+      });
+    }
   });
 
-  // Social links in the nav, footer, and on the Connect page
-  document.querySelectorAll('.nav-social a, .footer-social a, .social-link').forEach(function (el) {
-    el.addEventListener('click', function () {
-      var hint = (el.getAttribute('aria-label') || '') + ' ' + (el.href || '');
-      var platform = /tiktok/i.test(hint) ? 'TikTok'
-                   : /instagram/i.test(hint) ? 'Instagram'
-                   : 'Other';
-      var location = el.closest('.nav-social') ? 'nav'
-                   : el.closest('.footer-social') ? 'footer'
-                   : 'social_links';
-      track('social_click', { platform: platform, location: location });
+  // Newsletter forms: the homepage has two (hero + bottom CTA band)
+  document.querySelectorAll('.hero-email-form').forEach(function (form) {
+    form.addEventListener('submit', function () {
+      track('newsletter_signup', { form: form.closest('.cta-band') ? 'cta_band_email' : 'hero_email' });
     });
-  });
-
-  // Forms
-  var hero = document.querySelector('.hero-email-form');
-  if (hero) hero.addEventListener('submit', function () {
-    track('newsletter_signup', { form: 'hero_email' });
   });
 
   var contact = document.getElementById('contact-form');

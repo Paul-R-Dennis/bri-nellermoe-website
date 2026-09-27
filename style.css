@@ -1,7 +1,5 @@
-/* ============================================================
-   FONTS
-   ============================================================ */
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,300..800;1,6..12,300..800&display=swap');
+/* Fonts (Fraunces + Nunito Sans) load via <link> tags in each page's <head>
+   so the browser finds them immediately instead of after this file. */
 
 /* ============================================================
    TOKENS
@@ -17,7 +15,7 @@
   --forest:        #1B3A2D;
   --gold:          #C4A030;
   --gold-light:    #E0BC45;
-  --gold-dim:      #807020;
+  --gold-dim:      #A18D28; /* was #807020; raised to pass WCAG AA (4.5:1) for small text on every dark surface */
   --cream:         #F0ECCC;
   --cream-dim:     #C8C490;
   --text:          #E4E0BC;
@@ -376,6 +374,7 @@ a:hover { color: var(--gold-light); }
   font-family: var(--font-body);
   font-size: 0.85rem;
   outline: none;
+  min-width: 0; /* let the field shrink on narrow phones instead of overflowing */
 }
 .hero-email-form input[type="email"]::placeholder {
   color: rgba(var(--cream-rgb), 0.45);
@@ -493,14 +492,16 @@ a:hover { color: var(--gold-light); }
 }
 
 @media (max-width: 768px) {
+  /* minmax(0, 1fr) keeps the column from growing to fit the email form's
+     min width; no side padding because the section already supplies it */
   .hero-inner {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     text-align: center;
     gap: 2.5rem;
-    padding: 2.75rem 1.625rem 3.25rem;
+    padding: 2.75rem 0 3.25rem;
   }
   .hero-text { align-items: center; }
-  .hero-title { font-size: 46px; }
+  .hero-title { font-size: min(46px, 12vw); }
   .hero-actions { justify-content: center; }
   .hero-email-form { max-width: 100%; }
   .hero-cover { order: -1; width: 100%; text-align: center; }
@@ -1736,6 +1737,11 @@ section { padding: 6rem 3.75rem; }
 .form-submit:hover {
   background: var(--gold);
   color: var(--navy);
+}
+
+.form-submit:disabled {
+  opacity: 0.6;
+  cursor: default;
 }
 
 /* ============================================================

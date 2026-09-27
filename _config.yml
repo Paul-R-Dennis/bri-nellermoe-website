@@ -1,0 +1,4 @@
+# GitHub Pages runs Jekyll on this repo, which publishes Markdown files as
+# pages. Keep repo-only docs off the live site.
+exclude:
+  - CLAUDE.md
