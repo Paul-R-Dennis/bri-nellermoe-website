@@ -41,6 +41,7 @@
          : el.closest('.footer-social') ? 'footer'
          : el.closest('.links-social') ? 'links_page'
          : el.closest('.social-links') ? 'social_links'
+         : el.closest('.review-pullquote') ? 'review'
          : 'inline';
   }
 
