@@ -9,3 +9,6 @@ _design_redesign_extract/
 
 # Local build tools (press sheet generator etc.) — not part of the deployed site
 _tools/
+
+# Claude Code per-machine settings (permission allowlist) — never commit
+.claude/settings.local.json

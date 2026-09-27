@@ -226,14 +226,15 @@
           </div>
 
           <button type="submit" class="form-submit">Send Message</button>
-
-          <div id="form-success" style="display: none; margin-top: 1.5rem; text-align: center; color: var(--gold);">
-            Your message has been sent. Thank you!
-          </div>
-          <div id="form-error" style="display: none; margin-top: 1.5rem; text-align: center; color: #c0392b;">
-            Something went wrong. Please try again or email directly at <a href="mailto:brinellermoeauthor@gmail.com">brinellermoeauthor@gmail.com</a>.
-          </div>
         </form>
+
+        <!-- Status messages live outside the form so they stay visible after it's hidden -->
+        <div id="form-success" role="status" style="display: none; max-width: 600px; margin: 1.5rem auto 0; text-align: center; color: var(--gold);">
+          Your message has been sent. Thank you!
+        </div>
+        <div id="form-error" role="alert" style="display: none; max-width: 600px; margin: 1.5rem auto 0; text-align: center; color: #c0392b;">
+          Something went wrong. Please try again or email directly at <a href="mailto:brinellermoeauthor@gmail.com">brinellermoeauthor@gmail.com</a>.
+        </div>
 
         <p style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.6;">
           Or email directly: <a href="mailto:brinellermoeauthor@gmail.com">brinellermoeauthor@gmail.com</a>
@@ -275,18 +276,32 @@
     document.getElementById('year').textContent = new Date().getFullYear();
 
     const form = document.getElementById('contact-form');
+    const submitBtn = form.querySelector('.form-submit');
+    const formSuccess = document.getElementById('form-success');
+    const formError = document.getElementById('form-error');
     form.addEventListener('submit', async function(e) {
       e.preventDefault();
-      const data = new FormData(form);
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: data
-      });
-      if (response.ok) {
+      formError.style.display = 'none';
+      submitBtn.disabled = true; // block double submits while the request is in flight
+      submitBtn.textContent = 'Sending…';
+      let sent = false;
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: new FormData(form)
+        });
+        const result = await response.json().catch(() => ({}));
+        sent = response.ok && result.success !== false;
+      } catch (err) {
+        sent = false; // network failure: fall through to the error message
+      }
+      if (sent) {
         form.style.display = 'none';
-        document.getElementById('form-success').style.display = 'block';
+        formSuccess.style.display = 'block';
       } else {
-        document.getElementById('form-error').style.display = 'block';
+        formError.style.display = 'block';
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
       }
     });
 
