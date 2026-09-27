@@ -52,6 +52,14 @@ Still unconfirmed — keep placeholders until Bri provides:
 
 Already confirmed/live (not placeholders): *Secrets in Embers* blurb (Bri's Amazon copy, on books.html + press.html; home uses the final paragraph), full bio (Bri's own words, on about.html + press.html since 2026-08-23), final author headshot, buy links (Amazon + Barnes & Noble + Books2Read), TikTok URL (@brinellermoe), Goodreads profile, Kit email embed + double opt-in, press sheet PDF.
 
+## Kindle Unlimited
+The ebook is in Kindle Unlimited (KDP Select, confirmed on Amazon 2026-09-27), so it must stay Amazon-exclusive as an ebook (Books2Read lists Amazon for ebook, B&N for paperback only). A `.ku-note` line ("Free to read with Kindle Unlimited", linked to Amazon) sits near the buy buttons on books.html, index.html, and links.html; press.html notes it in Formats & dates. If Bri leaves KDP Select, remove all four and the `.ku-note` CSS.
+
+## Reviews
+- Live: one featured reader review on books.html (Britt M., 5★, Goodreads, cross-posted to Amazon; Bri approved featuring it 2026-09-27). Markup/CSS: `figure.review-pullquote`.
+- Rules: real reviews only, excerpted verbatim (trim with "…"; fix typos only in [brackets]); credit as first name + last initial or the reviewer's public handle, plus source; link to the original; stars only for that individual review. No aggregate "5.0 stars" badge. No Review/AggregateRating schema: Google disallows marking up reviews collected from other sites.
+- Plan: add a "What readers are saying" section on books.html at ~3 reviews, a "Praise" section on press.html (and the PDF) at 2–3, one quote on the homepage. Separate reviews page only at ~10+. Check a reviewer isn't a close friend/relative before featuring (FTC 2024 rule on undisclosed insider reviews).
+
 ## Open Decisions
 - Contact email: `author@brinellermoe.com` (press page + PDF; forwards via ImprovMX) vs `brinellermoeauthor@gmail.com` (connect.html + privacy.html). Pick one.
 - Press kit says "credit the cover artist where noted," but no artist is credited anywhere. Need the name from Bri, or drop the line.
