@@ -1,7 +1,5 @@
-/* ============================================================
-   FONTS
-   ============================================================ */
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,300..800;1,6..12,300..800&display=swap');
+/* Fonts (Fraunces + Nunito Sans) load via <link> tags in each page's <head>
+   so the browser finds them immediately instead of after this file. */
 
 /* ============================================================
    TOKENS
@@ -17,7 +15,7 @@
   --forest:        #1B3A2D;
   --gold:          #C4A030;
   --gold-light:    #E0BC45;
-  --gold-dim:      #807020;
+  --gold-dim:      #A18D28; /* was #807020; raised to pass WCAG AA (4.5:1) for small text on every dark surface */
   --cream:         #F0ECCC;
   --cream-dim:     #C8C490;
   --text:          #E4E0BC;
