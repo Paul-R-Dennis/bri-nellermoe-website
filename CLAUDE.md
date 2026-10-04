@@ -23,6 +23,8 @@ Author website for Bri Nellermoe, independent author. Her debut is romantasy (Se
 - The `<head>`, nav, footer, and nav-toggle script are duplicated in all 9 pages. A change to any of them must be made in every page.
 - Fonts load via `<link>` tags in each page's `<head>` (preconnect + Google Fonts stylesheet), not `@import` in CSS.
 - GA4 (`G-30GDJY8KCL`) with Consent Mode v2: inline snippet in each `<head>`, banner in `consent.js`, events in `analytics.js`. Buy and social links are tracked by URL match (Amazon / B&N / Books2Read, TikTok / Instagram / Goodreads), so new links need no class.
+- Contact email is `author@brinellermoe.com` everywhere (forwards to Bri's Gmail via ImprovMX; decided 2026-10-04). Don't publish the Gmail address.
+- privacy.html describes exactly what loads before and after consent (GA cookieless pings, Google Fonts, Kit's `ckid` localStorage on connect.html). Adding or removing a third-party service, cookie, or tracker means updating privacy.html and its "Last updated" date.
 - Instagram links are hidden by a TEMP rule at the bottom of `style.css` that matches the placeholder URL. When the real URL arrives: swap it in everywhere and delete that rule.
 - CSS token names `--burgundy*` and `--navy*` are legacy from the retired palette; they hold greens. `--gold-dim` was raised to #A18D28 for WCAG AA contrast; don't darken it.
 
@@ -61,11 +63,8 @@ The ebook is in Kindle Unlimited (KDP Select, confirmed on Amazon 2026-09-27), s
 - Plan: add a "What readers are saying" section on books.html at ~3 reviews, a "Praise" section on press.html (and the PDF) at 2–3, one quote on the homepage. Separate reviews page only at ~10+. Check a reviewer isn't a close friend/relative before featuring (FTC 2024 rule on undisclosed insider reviews).
 
 ## Open Decisions
-- Contact email: `author@brinellermoe.com` (press page + PDF; forwards via ImprovMX) vs `brinellermoeauthor@gmail.com` (connect.html + privacy.html). Pick one.
-- Press kit says "credit the cover artist where noted," but no artist is credited anywhere. Need the name from Bri, or drop the line.
 - Press cover download is only 960×1500; a larger file from Bri would suit press/print use.
 - "The occasional dragon theory" (connect.html) is template-era copy; confirm with Bri.
-- Privacy policy should mention the cookie banner / Cookie settings link, Consent Mode's cookieless pings on Reject, and Google Fonts. Needs Bri's approval before changing legal wording.
 
 ## Communication Preferences
 - No filler, no reinforcement, no restating what was asked
